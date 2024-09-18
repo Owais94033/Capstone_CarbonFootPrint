@@ -1,0 +1,13 @@
+
+@if(formStage==0){
+    <button (click)="addNew()">Add new</button>
+}@else if(formStage==1){
+    <app-travel (viewChangeEventEmitter)="handleEvent()"></app-travel>
+}@else if(formStage==2){
+    <app-foodnwasteform (viewChangeEventEmitter)="handleEvent()"></app-foodnwasteform>
+}@else if(formStage==3){
+    <app-gadget (formStageEvent)='handleEvent()' ></app-gadget>
+}
+@else{
+    <app-homecomponent></app-homecomponent>
+}

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"  rel="stylesheet" />
   <meta charset="utf-8">
   <title>Capstone</title>
   <base href="/">
@@ -9,5 +10,18 @@
 </head>
 <body>
   <app-root></app-root>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <!-- <script type="importmap">
+    {
+      "imports": {
+        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+      }
+    }
+  </script> -->
+  <!-- ... Your HTML and CSS -->
+  <!-- Import @google/generative-ai, as shown above. -->
+  <script type="module">
+    import { GoogleGenerativeAI } from "@google/generative-ai";
+</script>
 </body>
 </html>
