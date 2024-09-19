@@ -1,0 +1,16 @@
+#spring.application.name=leaderboard
+spring:
+  application:
+    name: leaderboard
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/ust?useSSL=false&serverTimezone=UTC
+    username: root
+    password: Owais@9354
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update  # Consider changing to 'validate' or 'none' in production
+    show-sql: true
+server:
+  port: 8086

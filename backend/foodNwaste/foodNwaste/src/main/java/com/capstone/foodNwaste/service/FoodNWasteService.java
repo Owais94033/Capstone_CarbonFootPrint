@@ -47,6 +47,7 @@ public class FoodNWasteService {
         return foodNWasteRepository.save(foodNWaste);
     }
 
+
     // Delete a record
     public void deleteFoodNWaste(Long id) {
         FoodNWaste foodNWaste = foodNWasteRepository.findById(id)
