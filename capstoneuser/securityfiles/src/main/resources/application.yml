@@ -12,6 +12,7 @@ spring:
     hibernate:
       ddl-auto: update  # Consider changing to 'validate' or 'none' in production
     show-sql: true
+    dialect: org.hibernate.dialect.MySQL8Dialect
 
   cloud:
     gateway:

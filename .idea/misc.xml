@@ -4,10 +4,12 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/travel/travel/pom.xml" />
-        <option value="$PROJECT_DIR$/gadgets/gadgets/pom.xml" />
-        <option value="$PROJECT_DIR$/foodNwaste/foodNwaste/pom.xml" />
-        <option value="$PROJECT_DIR$/leaderboard/leaderboard/pom.xml" />
+        <option value="$PROJECT_DIR$/backend/travel/travel/pom.xml" />
+        <option value="$PROJECT_DIR$/backend/gadgets/gadgets/pom.xml" />
+        <option value="$PROJECT_DIR$/backend/foodNwaste/foodNwaste/pom.xml" />
+        <option value="$PROJECT_DIR$/backend/leaderboard/leaderboard/pom.xml" />
+        <option value="$PROJECT_DIR$/capstoneuser/securityfiles/pom.xml" />
+        <option value="$PROJECT_DIR$/capstoneuser/lbeurekaservice/pom.xml" />
       </list>
     </option>
   </component>
