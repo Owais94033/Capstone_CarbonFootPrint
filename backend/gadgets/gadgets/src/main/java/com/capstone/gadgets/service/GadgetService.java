@@ -19,7 +19,7 @@ public class GadgetService {
     }
 
     // Fetch gadget by userId and date
-    public List<Gadget> getGadgetsByUserIdAndDate(Long userId, LocalDate date) {
+    public Gadget getGadgetsByUserIdAndDate(Long userId, LocalDate date) {
         return gadgetRepository.findByUserIdAndDate(userId, date);
     }
 

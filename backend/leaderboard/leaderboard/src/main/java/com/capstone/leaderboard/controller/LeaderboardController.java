@@ -11,7 +11,8 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/Leaderboard")
+@RequestMapping("/api/leaderboard")
+
 public class LeaderboardController {
     @Autowired
     private LeaderboardService leaderboardService;
@@ -24,10 +25,9 @@ public class LeaderboardController {
 
     // Get a specific leaderboard entry by ID
     @GetMapping("/{id}")
-    public ResponseEntity<Leaderboard> getLeaderboardEntryById(@PathVariable Long id) {
-        Optional<Leaderboard> leaderboardEntry = leaderboardService.getLeaderboardEntryById(id);
-        return leaderboardEntry.map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.notFound().build());
+    public Leaderboard getLeaderboardEntryById(@PathVariable Long id) {
+        Leaderboard leaderboardEntry = leaderboardService.getLeaderboardEntryById(id);
+        return leaderboardEntry;
     }
 
     // Create a new leaderboard entry
@@ -37,20 +37,19 @@ public class LeaderboardController {
     }
 
     // Update an existing leaderboard entry
-    @PutMapping("/{id}")
-    public ResponseEntity<Leaderboard> updateLeaderboardEntry(@PathVariable Long id, @RequestBody Leaderboard leaderboardDetails) {
-        Leaderboard updatedLeaderboard = leaderboardService.updateLeaderboardEntry(id, leaderboardDetails);
-        if (updatedLeaderboard != null) {
-            return ResponseEntity.ok(updatedLeaderboard);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+    @PutMapping("/{id}/{Carbon}")
+    public Leaderboard updateLeaderboardEntry(@PathVariable Long id, @PathVariable double Carbon) {
+        Leaderboard updatedLeaderboard = leaderboardService.updateLeaderboardEntry(id, Carbon);
+            return updatedLeaderboard;
     }
 
     // Delete a leaderboard entry
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteLeaderboardEntry(@PathVariable Long id) {
+    public void deleteLeaderboardEntry(@PathVariable Long id) {
         leaderboardService.deleteLeaderboardEntry(id);
-        return ResponseEntity.noContent().build();
+
     }
+
+
+
 }

@@ -10,6 +10,6 @@ import java.util.List;
 @Repository
 public interface TravelRepository extends JpaRepository<Travel , Long> {
 
-    List<Travel> findByUserIdAndDate(Long userId, LocalDate date);
+    Travel findByUserIdAndDate(Long userId, LocalDate date);
 
 }

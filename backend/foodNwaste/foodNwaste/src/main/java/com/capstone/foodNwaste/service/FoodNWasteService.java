@@ -20,7 +20,7 @@ public class FoodNWasteService {
     }
 
     // Fetch records by userId and date
-    public List<FoodNWaste> getFoodNWasteByUserIdAndDate(Long userId, LocalDate date) {
+    public FoodNWaste getFoodNWasteByUserIdAndDate(Long userId, LocalDate date) {
         return foodNWasteRepository.findByUserIdAndDate(userId, date);
     }
 

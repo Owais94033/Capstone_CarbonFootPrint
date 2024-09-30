@@ -10,6 +10,6 @@ import java.util.List;
 @Repository
 public interface FoodNWasteRepository extends JpaRepository<FoodNWaste , Long> {
 
-    List<FoodNWaste> findByUserIdAndDate(Long userId, LocalDate date);
+    FoodNWaste findByUserIdAndDate(Long userId, LocalDate date);
 
 }

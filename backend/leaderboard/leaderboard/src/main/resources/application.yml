@@ -4,13 +4,23 @@ spring:
     name: leaderboard
 
   datasource:
-    url: jdbc:mysql://localhost:3306/ust?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/Carbonfootprint?useSSL=false&serverTimezone=UTC
     username: root
-    password: Owais@9354
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update  # Consider changing to 'validate' or 'none' in production
     show-sql: true
 server:
-  port: 8086
+  port: 0
+
+eureka:
+  client:
+    registerWithEureka: true        # Registers this service with the Eureka server
+    fetchRegistry: true             # Fetches the registry from the Eureka server
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/  # URL of the Eureka server to connect with
+  instance:
+    hostname: localhost             # The hostname of the instance
+    instance-id: "${spring.application.name}:${instanceId:${random.value}}"

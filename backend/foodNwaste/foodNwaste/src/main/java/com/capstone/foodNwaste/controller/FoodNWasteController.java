@@ -25,7 +25,7 @@ public class FoodNWasteController {
 
     // Get records by userId and date
     @GetMapping("/{userId}/{date}")
-    public List<FoodNWaste> getFoodNWasteByUserIdAndDate(@PathVariable Long userId, @PathVariable String date) {
+    public FoodNWaste getFoodNWasteByUserIdAndDate(@PathVariable Long userId, @PathVariable String date) {
         return foodNWasteService.getFoodNWasteByUserIdAndDate(userId, LocalDate.parse(date));
     }
 

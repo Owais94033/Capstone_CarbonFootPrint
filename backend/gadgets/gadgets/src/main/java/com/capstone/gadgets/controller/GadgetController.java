@@ -23,7 +23,7 @@ public class GadgetController {
     }
 
     @GetMapping("/{userId}/{date}")
-    public List<Gadget> getGadgetByUserIdAndDate(@PathVariable Long userId, @PathVariable String date) {
+    public Gadget getGadgetByUserIdAndDate(@PathVariable Long userId, @PathVariable String date) {
         return gadgetService.getGadgetsByUserIdAndDate(userId, LocalDate.parse(date));
     }
 
@@ -43,4 +43,7 @@ public class GadgetController {
         gadgetService.deleteGadget(id);
         return ResponseEntity.noContent().build();
     }
+
+
+
 }

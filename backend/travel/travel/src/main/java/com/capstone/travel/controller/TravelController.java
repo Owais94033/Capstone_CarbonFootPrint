@@ -24,7 +24,7 @@ public class TravelController {
 
     // Get travel records by userId and date
     @GetMapping("/{userId}/{date}")
-    public List<Travel> getTravelsByUserIdAndDate(@PathVariable Long userId, @PathVariable String date) {
+    public Travel getTravelsByUserIdAndDate(@PathVariable Long userId, @PathVariable String date) {
         return travelService.getTravelsByUserIdAndDate(userId, LocalDate.parse(date));
     }
 

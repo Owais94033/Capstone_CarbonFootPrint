@@ -5,6 +5,7 @@ import com.capstone.leaderboard.repository.LeaderboardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,8 +19,8 @@ public class LeaderboardService {
         return leaderboardRepository.findAll();
     }
 
-    public Optional<Leaderboard> getLeaderboardEntryById(Long id) {
-        return leaderboardRepository.findById(id);
+    public Leaderboard getLeaderboardEntryById(Long id) {
+        return leaderboardRepository.findById(id).get();
     }
 
     public Leaderboard saveLeaderboardEntry(Leaderboard leaderboard) {
@@ -30,14 +31,13 @@ public class LeaderboardService {
         leaderboardRepository.deleteById(id);
     }
 
-    public Leaderboard updateLeaderboardEntry(Long id, Leaderboard updatedEntry) {
-        Optional<Leaderboard> leaderboardEntry = leaderboardRepository.findById(id);
-        if (leaderboardEntry.isPresent()) {
-            Leaderboard entry = leaderboardEntry.get();
-            entry.setName(updatedEntry.getName());
-            entry.setScore(updatedEntry.getScore());
+    public Leaderboard updateLeaderboardEntry(Long id, double Carbon) {
+        Leaderboard leaderboardEntry = leaderboardRepository.findById(id).get();
+            Leaderboard entry = leaderboardEntry;
+            entry.setScore(Carbon);
             return leaderboardRepository.save(entry);
-        }
-        return null;
     }
+
+
+
 }

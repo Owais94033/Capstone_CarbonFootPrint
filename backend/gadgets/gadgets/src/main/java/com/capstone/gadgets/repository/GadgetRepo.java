@@ -10,6 +10,6 @@ import java.util.List;
 @Repository
 public interface GadgetRepo extends JpaRepository<Gadget , Long> {
 
-    List<Gadget> findByUserIdAndDate(Long userId, LocalDate date);
+    Gadget findByUserIdAndDate(Long userId, LocalDate date);
 
 }

@@ -23,7 +23,7 @@ public class TravelService {
     }
 
     // Fetch travel records by userId and date
-    public List<Travel> getTravelsByUserIdAndDate(Long userId, LocalDate date) {
+    public Travel getTravelsByUserIdAndDate(Long userId, LocalDate date) {
         return travelRepository.findByUserIdAndDate(userId, date);
     }
 
