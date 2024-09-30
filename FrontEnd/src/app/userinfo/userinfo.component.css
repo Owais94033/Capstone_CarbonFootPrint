@@ -1,0 +1,51 @@
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .profile-avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .profile-info {
+    text-align: center;
+  }
+  
+  .profile-info h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+  
+  .role {
+    font-size: 13px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .co2e-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+  
+  .co2e-data {
+    padding: 0%;
+    font-size: 40px;
+    margin: 0%;
+    transform: translateY(-10px);
+    font-weight: 700;
+    color: #000;
+  }
+  

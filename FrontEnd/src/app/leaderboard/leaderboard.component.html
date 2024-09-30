@@ -1,0 +1,15 @@
+<div class="leaderboard">
+    <h2>Leaderboard</h2>
+    
+    <div *ngFor="let entry of topThreeUsers" class="leaderboard-item">
+      <div class="avatar">
+        <img src="background.jpg" alt="Avatar">
+      </div>
+      <div class="details">
+        <p><strong>{{ entry.name }}</strong></p>
+        <p>Total CO2e</p>
+        <p>{{ entry.score }}</p>
+      </div>
+    </div>
+  </div>
+  

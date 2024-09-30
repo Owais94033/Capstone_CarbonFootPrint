@@ -1,0 +1,64 @@
+
+
+<div class="form-container">
+    <h2>Travel Data Form</h2>
+    @if(disableForm){
+      <div>
+        <p>Mode Of Travel : {{travelOldData.mode}}</p>
+        <p>Distance Travelled: {{travelOldData.distanceTravelled}}</p>
+        <p>Mileage: {{travelOldData.mileage}}</p>
+        <p>Fuel Type: {{travelOldData.fuelType}}</p>
+
+        <button (click)="renderNextForm()">Next</button>
+      </div>
+    }
+    @else{
+    <form [formGroup]="travelForm" (submit)="handleSubmit()">
+  
+      <div class="form-group">
+        <label for="mode">Mode of Transport</label>
+        <select id="mode" name="mode" formControlName="mode" required 
+        
+        >
+          <option value="Car">Car</option>
+          <option value="Bike">Bike</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="distanceTravelled">Distance Travelled (km)</label>
+        <input
+          type="number"
+          id="distanceTravelled"
+          name="distanceTravelled"
+          required
+          placeholder="Enter distance travelled"
+          formControlName="distanceTravelled"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="mileage">Mileage (km per liter)</label>
+        <input
+          type="number"
+          id="mileage"
+          name="mileage"
+          required
+          placeholder="Enter mileage"
+          formControlName="mileage"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="fuelType">Fuel Type</label>
+        <select id="fuelType" name="fuelType" required formControlName="fuelType">
+          <option value="Diesel">Diesel</option>
+          <option value="Petrol">Petrol</option>
+        </select>
+      </div>
+  
+      <button type="submit">Submit</button>
+    </form>
+  }
+  </div>
+  

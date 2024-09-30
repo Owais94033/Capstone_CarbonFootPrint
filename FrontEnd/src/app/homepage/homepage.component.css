@@ -1,0 +1,46 @@
+.landing-container {
+    background-image: url('/nature.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+  .content {
+    background-color: rgba(0, 0, 0, 0.5); /* Slight dark overlay to make the text stand out */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 600px;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .get-started-button {
+    background-color: #6200ea;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .get-started-button:hover {
+    background-color: #4500a1;
+  }
+  

@@ -1,0 +1,16 @@
+button{
+    padding: 15px;
+    width: 200px;
+    border-radius: 50px;
+    background-color: #6d31ed;
+    border: 0ch;
+    color: white;
+    transform: translate(665px,100px);
+}
+
+button:hover{
+    background-color: #7142d8;
+}
+
+.forms{
+}

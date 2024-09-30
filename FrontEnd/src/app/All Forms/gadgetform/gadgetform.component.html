@@ -1,0 +1,63 @@
+<div class="form-container">
+    <h2>Device Usage Form</h2>
+    @if(disableForm){
+      <div>
+        <p>Mobile Name : {{gadgetPastData.mobileName}}</p>
+        <p>Mobile Usage Time: {{gadgetPastData.mobileUsageTime}}</p>
+        <p>Laptop Name: {{gadgetPastData.laptopName}}</p>
+        <p>Laptop Usage Time: {{gadgetPastData.laptopUsageTime}}</p>
+
+        <button (click)="renderNextForm()">Next</button>
+      </div>
+    }
+    @else{
+    <form [formGroup]="gadgetForm" (submit)='handleSubmit()'>
+      <div class="form-group">
+        <label for="mobileName">Mobile Name</label>
+        <input
+          type="text"
+          id="mobileName"
+          name="mobileName"
+          placeholder="Enter Mobile Name"
+          formControlName="mobileName"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="mobileUsageTime">Mobile Usage Time (Hours)</label>
+        <input
+          type="number"
+          id="mobileUsageTime"
+          name="mobileUsageTime"
+          placeholder="Enter Mobile Usage Time"
+          formControlName="mobileUsageTime"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="laptopName">Laptop Name</label>
+        <input
+          type="text"
+          id="laptopName"
+          name="laptopName"
+          placeholder="Enter Laptop Name"
+          formControlName="laptopName"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="laptopUsageTime">Laptop Usage Time (Hours)</label>
+        <input
+          type="number"
+          id="laptopUsageTime"
+          name="laptopUsageTime"
+          placeholder="Enter Laptop Usage Time"
+          formControlName="laptopUsageTime"
+        />
+      </div>
+  
+      <button type="submit">Submit</button>
+    </form>
+  }
+  </div>
+  

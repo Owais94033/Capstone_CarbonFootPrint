@@ -1,0 +1,15 @@
+<div class="maincontainer">
+    <h1>Recomendations</h1>
+    @if(loading){
+        <div class="loader">
+            <div class="dot yellow"></div>
+            <div class="dot pink"></div>
+            <div class="dot cyan"></div>
+            <div class="dot purple"></div>
+          </div>
+          
+          
+    }@else{
+        <pre>{{answer}}</pre>
+    }
+</div>

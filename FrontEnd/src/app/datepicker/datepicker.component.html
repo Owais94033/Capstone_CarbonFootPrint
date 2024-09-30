@@ -1,0 +1,19 @@
+<div class="week-container">
+    <input type="date" id="date-input">
+    <div id="date-display">
+      <!-- Dynamic Date Display -->
+    </div>
+    <ul class="week-days">
+      <li *ngFor="let day of generateWeekDays()" class="week-day">
+          <label class="week">{{ day.day }}</label>
+        <!-- <a [routerLink]="['/timeline', day.date]"> -->
+        <a (click)='handleClick(day.date)'>
+         <br> {{ day.date }}
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <app-forms *ngIf="showform" [formStage]='value' (formStageEventEmitter)="handleFormStageEvent($event)"></app-forms>
+  </div>
+  

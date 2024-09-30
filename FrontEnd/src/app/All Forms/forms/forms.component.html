@@ -1,0 +1,11 @@
+<div class="forms">
+    @if(formStage==0){
+        <button (click)="addNew()">Add new</button>
+    }@else if(formStage==1){
+        <app-travelform (viewChangeEventEmitter)="handleEvent()"></app-travelform>
+    }@else if(formStage==2){
+        <app-foodform (viewChangeEventEmitter)="handleEvent()"> </app-foodform>
+    }@else if(formStage==3){
+        <app-gadgetform (formStageEvent)='handleEvent()' ></app-gadgetform>
+    }
+    </div>
